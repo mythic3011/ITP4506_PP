@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <title>Lab 3 - 2</title>
+
+    <script src="jslib/jquery-1.11.1.js"
+            type="text/javascript"></script>
+    <script language="javascript" type="text/javascript">
+        $(document).ready(function () {
+            $("ul").hide();
+            $("#Apple").click(function () {
+                $("div").children("#A ul").addClass("selected_red").show()
+                $("div").children("#S ul").addClass("selected_blue").hide()
+            });
+            $("#Samsung").click(function () {
+                $("div").children("#S ul").addClass("selected_blue").show()
+                $("div").children("#A ul").addClass("selected_red").hide()
+            });
+        });
+    </script>
+    <style>
+        .selected_red {
+            color: red;
+        }
+
+        .selected_blue {
+            color: blue;
+        }
+    </style>
+
+</head>
+<body>
+<input id="Apple" type="button" value="Apple"/>
+<input id="Samsung" type="button" value="Samsung"/>
+<div id="A">
+    <ul>
+        <li>iPhone</li>
+        <li>iPad</li>
+        <li>iPod</li>
+    </ul>
+</div>
+<div id="S">
+    <ul>
+        <li>Galaxy Tab</li>
+        <li>Galaxy Note</li>
+        <li>Galaxy S3</li>
+    </ul>
+</div>
+
+</body>
+</html>

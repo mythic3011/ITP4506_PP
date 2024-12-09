@@ -1,0 +1,12 @@
+[
+    {
+        "Staff_ID": "1",
+        "Name": "John Doe",
+        "Post": "Manager"
+    },
+    {
+        "Staff_ID": "2",
+        "Name": "Jane Doe",
+        "Post": "Assistant Manager"
+    }
+]

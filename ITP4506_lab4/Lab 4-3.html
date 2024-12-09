@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>Lab4 - 3</title>
+    <script src="jslib/jquery-1.11.1.js"
+            type="text/javascript"></script>
+    <script language="javascript" type="text/javascript">
+        $(document).ready(function () {
+            $("#driver").click(function () {
+                $.getJSON("jslib/resultEx.json", function (data) {
+                    let formattedData = "";
+
+                    for (let i = 0; i < data.name.length; i++) {
+                        for (let dataKey in data) {
+                            formattedData += data[dataKey][i] + "\t";
+                        }
+                        formattedData += "\n";
+                    }
+                    $("#stage").text(formattedData);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<p>Click on the button to load students' records:</p>
+<pre>
+   <div id="stage" style="background-color:pink;">
+            STAGE
+   </div>
+   </pre>
+<input id="driver" type="button" value="Load Data"/>
+</body>
+</html>
+
+
+

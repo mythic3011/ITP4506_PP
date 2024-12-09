@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        #meter1,
+        #select,
+        #name {
+            width: 150px
+        }
+    </style>
+</head>
+
+<body>
+    <h1>QC Record</h1>
+    <p>Product line:
+        <select onselect="this.focus();" id="select">
+            <option>Product A</option>
+            <option>Product B</option>
+            <option selected>Product C</option>
+        </select>
+        Period: <input type="date" />
+    </p>
+    <p><label for="name">Employee ID: </label>
+        <input id="name" type="text" size="20px" (iii)="e.g. A123456" />
+    </p>
+    <form oninput="meter1.value=data1.value">
+        Passing rate (%) :
+        <input type="number" id="data1" min=0 max=100 value="50" step="1" />
+        <p>Quality bar : <meter id="meter1" value="50" min="0" max="100" low="40" high="75" optimum="90"></p>
+    </form>
+    <p><input type="submit" value="Submit" />
+</body>
+
+<body>
+</body>

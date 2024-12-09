@@ -1,0 +1,106 @@
+﻿<html lang="en">
+<head>
+    <title>Lab 2 - 4</title>
+    <script src="jslib/jquery-1.11.1.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // add striped css class to even via html:nth-child()
+            $("table tr:nth-child(even)").addClass("striped")
+            $("table tr").mouseover(
+                function () {
+                    $(this).addClass("over")
+                }
+            ).mouseout(
+                function () {
+                    $(this).removeClass("over")
+                    $("table tr:nth-child(even)").addClass("striped")
+                }
+            )
+        })
+    </script>
+
+    <style type="text/css">
+        body, td {
+            font-size: 10pt;
+        }
+
+        table {
+            background-color: black;
+            border: 1px black solid;
+            border-collapse: collapse;
+        }
+
+        th {
+            border: 1px outset silver;
+            background-color: maroon;
+            color: white;
+        }
+
+        tr {
+            background-color: white;
+            margin: 1px;
+        }
+
+        tr.striped {
+            background-color: coral;
+        }
+
+        tr.over {
+            background-color: gold;
+        }
+
+        td {
+            padding: 1px 8px;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <th>No</th>
+        <th>Language</th>
+        <th>Price</th>
+    </tr>
+    <tr>
+        <td>001</td>
+        <td>C#</td>
+        <td>7500</td>
+    </tr>
+    <tr>
+        <td>002</td>
+        <td>Java</td>
+        <td>7000</td>
+    </tr>
+    <tr>
+        <td>003</td>
+        <td>C</td>
+        <td>6000</td>
+    </tr>
+    <tr>
+        <td>004</td>
+        <td>C++</th>
+        <td>6500</td>
+    </tr>
+    <tr>
+        <td>005</td>
+        <td>PHP</th>
+        <td>5000</td>
+    </tr>
+    <tr>
+        <td>006</td>
+        <td>jQuery</th>
+        <td>9000</td>
+    </tr>
+    <tr>
+        <td>007</td>
+        <td>HTML5</td>
+        <td>8000</td>
+    </tr>
+    <tr>
+        <td>008</td>
+        <td>VBasic</td>
+        <td>6500</td>
+    </tr>
+</table>
+</body>
+</html>

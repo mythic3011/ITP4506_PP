@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<title>
+
+</title>
+<script type="text/javascript" src="jslib/jquery-1.11.1.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#buttonA").click(function () {
+            $("#input1").val("<center>" + "Hello" + "</center>");
+        });
+        $("#buttonB").click(function () {
+            $("#input2").val($("#buttonB").attr("id"));
+        });
+        $("#buttonC").click(function () {
+            $("div").empty().append("<center>" + "Hello" +
+                "</center>");
+        });
+        $("div").click(function () {
+            $(this).css("background-color", "gray");
+            $(this).html("");
+            $(this).append('GoodBye');
+        });
+    });
+</script>
+<style type="text/css">
+    div {
+        margin: 10px;
+        padding: 12px;
+        border: 1px solid black;
+        width: 100px;
+        height: 20px;
+    }
+
+    .gray_box {
+        background-color: gray;
+    }
+</style>
+
+<body>
+    <button id="buttonA">Button A</button>
+    <button id="buttonB">Button B</button>
+    <button id="buttonC">Button C</button>
+    <hr />
+    Input 1: <input id="input1" />
+    Input 2: <input id="input2" />
+    <div></div>
+
+</body>

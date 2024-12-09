@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>Toggle text</title>
+    <script src="jslib/jquery-1.11.1.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#myimg1").animate({
+                    left: '250px',
+                    top: '100px',
+                    width: '150px',
+                    height: '150px',
+                    opacity: '0.5'
+                }, 2000)
+                    .animate({
+                        left: '10px',
+                        top: '100px',
+                        width: '50px',
+                        height: '50px',
+                        opacity: '0.8'
+                    }, 3000);
+
+                $("#myimg2").animate({
+                    left: '250px',
+                    top: '100px',
+                    width: '150px',
+                    height: '150px',
+                    opacity: '0.5'
+                }, 2000)
+                    .animate({
+                        left: '60px',
+                        top: '100px',
+                        width: '50px',
+                        height: '50px',
+                        opacity: '0.8'
+                    }, 3000);
+
+                $("#myimg3").animate({
+                    left: '250px',
+                    top: '100px',
+                    width: '150px',
+                    height: '150px',
+                    opacity: '0.5'
+                }, 2000)
+                    .animate({
+                        left: '10px',
+                        top: '150px',
+                        width: '50px',
+                        height: '50px',
+                        opacity: '0.8'
+                    }, 3000);
+
+                $("#myimg4").animate({
+                    left: '250px',
+                    top: '100px',
+                    width: '150px',
+                    height: '150px',
+                    opacity: '0.5'
+                }, 2000)
+                    .animate({
+                        left: '60px',
+                        top: '150px',
+                        width: '50px',
+                        height: '50px',
+                        opacity: '0.8'
+                    }, 3000);
+            }
+            );
+        });
+    </script>
+</head>
+
+<body>
+    <button>Start Animation</button>
+    <p>Moving the square!</p>
+    <div style="background:green;
+         left:10px; top:100px; 
+         height:100px;width:100px;position:absolute;">
+    </div>
+    <div><img alt="Sample image" id="myimg1" src="jslib/jquery-logo.jpg"
+            style="width:50px;height:40px;left:10px; top:200px;position:absolute;" />
+    </div>
+    <div><img alt="Sample image" id="myimg2" src="jslib/jquery-logo.jpg"
+            style="width:50px;height:40px;left:10px; top:240px;position:absolute;" />
+    </div>
+    <div><img alt="Sample image" id="myimg3" src="jslib/jquery-logo.jpg"
+            style="width:50px;height:40px;left:10px; top:280px;position:absolute;" />
+    </div>
+    <div><img alt="Sample image" id="myimg4" src="jslib/jquery-logo.jpg"
+            style="width:50px;height:40px;left:10px; top:320px;position:absolute;" />
+    </div>
+</body>
+
+</html>

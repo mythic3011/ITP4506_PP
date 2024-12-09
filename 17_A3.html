@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<title>
+</title>
+<script type="text/javascript" src="jslib/jquery-1.11.1.js"></script>
+<script>
+    $(document).ready(function () { // When the document is ready
+        var i, o; // Declare variables i and o
+        $("#display").click(function () { // When the display button is clicked
+            i = $("#step").val(); // Get the value from the step input
+            o = i * 2; // Calculate o as twice the value of i
+            $("#black").css({ // Set the CSS properties of the black div
+                width: i + "px", // Set the width of the black div
+                height: i + "px" // Set the height of the black div
+            });
+            $("#gray").css({ // Set the CSS properties of the gray div
+                width: o + "px", // Set the width of the gray div
+                height: o + "px" // Set the height of the gray div
+            });
+        });
+        $("#start").click(function () { // When the start button is clicked
+            $("#black").animate({ // Animate the black div
+                left: o - i + "px", // Move the black div to the right
+                top: o - i + "px" // Move the black div down
+            }, 1000, function () { // Duration of the animation is 1000ms
+                $(this).animate({ // Animate the black div back to its original position
+                    left: "0px", // Move the black div to the left
+                    top: "0px" // Move the black div up
+                }, 1000); // Duration of the animation is 1000ms
+            });
+        });
+    });
+</script>
+
+<body>
+    <button id="display">Display</button>
+    <button id="start">Start Animation</button>
+    <p>Moving the square! </p>
+    <p>Step:<input id="step" /></p>
+    <div id="gray" style="background:gray;left:10px; top:130px; position:absolute;">
+        <div id="black" style="background:black;position:absolute;"></div>
+    </div>
+</body>

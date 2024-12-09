@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="jslib/jquery-1.11.1.js"></script>
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function () {
+            $("#driver").click(function (event) {
+                $.getJSON('jslib/staffdata.json', function (jd) {
+                    $('#staff').html('<table>')
+                        .append('<tr><th>Staff_ID</th><th>Name</th><th>Post</th><tr></table>');
+                    for (var i = 0; i < jd.length; i++) {
+                        $('#staff').append('<tr><td>' + jd[i].Staff_ID + '</td><td>' + jd[i].Name + '</td><td>' + jd[i].Post + '</td></tr>');
+                    }
+                });
+            });
+        });
+    </script>
+    <style>
+        table,
+        td,
+        th {
+            border: 1px solid black;
+            border-collapse: collapse
+        }
+
+        td,
+        th {
+            width: 80px
+        }
+    </style>
+</head>
+
+<body>
+    <p>Click on the button to load staff's records:</p>
+    <div id="staff">
+        STAFF RECORDS
+    </div>
+    <input type="button" id="driver" value="Load Staff Data" />
+</body>
+
+</html>

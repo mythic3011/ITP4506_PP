@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lab 1-4</title>
+    <script src="jslib/jquery-1.11.1.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("div p").hide();
+            $("#button1").click(function () {
+                $("div p").hide();
+                $("p:lt(3)").show();
+            });
+            $("#button2").click(function () {
+                $("div p").hide();
+                $("P:gt(2)").show();
+            });
+        });
+    </script>
+</head>
+<body>
+   <button id=button1>Show first 3 items</button>
+   <button id=button2>Show last 3 items</button>
+   <div>
+      <p>Item 1</p>
+      <p>Item 2</p>
+      <p>Item 3</p>
+      <p>Item 4</p>
+      <p>Item 5</p>
+      <p>Item 6</p>
+   </div>
+</body>
+</html>

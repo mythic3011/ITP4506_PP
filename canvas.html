@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <title>Canvas</title>
+    <script type="text/javascript" src="jslib/jquery-1.11.1.js"></script>
+    <script>
+        // Function to draw a square
+        function drawSquare() {
+            // Create a canvas element
+            var canvas = document.createElement('canvas');
+            // Set canvas width and height
+            canvas.width = 200;
+            canvas.height = 200;
+            // Add border to canvas
+            canvas.style.border = "1px solid";
+            // Append canvas to the square div
+            document.getElementById('square').appendChild(canvas);
+            // Get the 2D drawing context
+            var ctx = canvas.getContext('2d');
+            // Set fill color to red
+            ctx.fillStyle = "red";
+            // Draw a filled rectangle
+            ctx.fillRect(50, 50, 50, 50);
+        }
+
+        // Function to draw a circle
+        function drawCircle() {
+            // Create a canvas element
+            var canvas = document.createElement('canvas');
+            // Set canvas width and height
+            canvas.width = 200;
+            canvas.height = 200;
+            // Add border to canvas
+            canvas.style.border = "1px solid";
+            // Append canvas to the circle div
+            document.getElementById('circle').appendChild(canvas);
+            // Get the 2D drawing context
+            var ctx = canvas.getContext('2d');
+            // Set fill color to blue
+            ctx.fillStyle = "blue";
+            // Begin a new path
+            ctx.beginPath();
+            // Draw a circle
+            ctx.arc(100, 100, 50, 0, 2 * Math.PI);
+            // Fill the circle
+            ctx.fill();
+        }
+
+        // Function to draw a triangle
+        function drawTriangle() {
+            // Create a canvas element
+            var canvas = document.createElement('canvas');
+            // Set canvas width and height
+            canvas.width = 200;
+            canvas.height = 200;
+            // Add border to canvas
+            canvas.style.border = "1px solid";
+            // Append canvas to the triangle div
+            document.getElementById('triangle').appendChild(canvas);
+            // Get the 2D drawing context
+            var ctx = canvas.getContext('2d');
+            // Set fill color to green
+            ctx.fillStyle = "green";
+            // Begin a new path
+            ctx.beginPath();
+            // Move to the top vertex of the triangle
+            ctx.moveTo(100, 10);
+            // Draw line to the bottom right vertex
+            ctx.lineTo(190, 190);
+            // Draw line to the bottom left vertex
+            ctx.lineTo(10, 190);
+            // Fill the triangle
+            ctx.fill();
+        }
+
+        // Event listener for DOMContentLoaded to draw shapes after the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            drawSquare(); // Draw the square
+            drawCircle(); // Draw the circle
+            drawTriangle(); // Draw the triangle
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Square</h1>
+    <div id="square">
+        <!-- Canvas will be created here -->
+    </div>
+    <h1>Circle</h1>
+    <div id="circle">
+        <!-- Canvas will be created here -->
+    </div>
+    <h1>Triangle</h1>
+    <div id="triangle">
+        <!-- Canvas will be created here -->
+    </div>
+</body>
+
+</html>

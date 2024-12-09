@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="jslib/jquery-1.11.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#product").change(function () {
+                var product = $("#product").val().trim();
+                $("div").html(product);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    Please choose a product:
+    <div style="width:150px;height:40px;background:yellow;border:black 1px solid"></div>
+    <select id="product">
+        <option value="">Choose a product</option>
+        <option value="Notebook">Notebook</option>
+        <option value="Laptop">Laptop</option>
+        <option value="ipad">ipad</option>
+        <option value="Monitor">Monitor</option>
+    </select><br />
+</body>
+
+</html>

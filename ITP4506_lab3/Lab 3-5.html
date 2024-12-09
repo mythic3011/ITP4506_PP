@@ -1,0 +1,77 @@
+﻿<html lang="en">
+<head>
+    <title>Lab 3 - 5</title>
+    <script src="jslib/jquery-1.11.1.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var product;
+            $("select").change(
+                function () {
+                    product = $(this).val();
+                }
+            )
+
+            $("#prepend").click(function () {
+                if (product !== "white") {
+                    $("#div1").prepend("<p>" + product + "</p>")
+                }
+            })
+
+            $("#append").click(function () {
+                if (product !== "white") {
+                    $("#div1").append("<p>" + product + "</p>")
+                }
+            })
+
+            $("#clear").click(function () {
+                location.reload();
+            })
+
+            $("#update").click(function () {
+                $("#div2").append("<p>" + $("#div1").html() + "</p>")
+                $("#div1").html("")
+            })
+        });
+    </script>
+    <style type="text/css">
+        body {
+            margin: 10px;
+        }
+
+        #div1 {
+            border: 1px solid;
+            height: 200px;
+            width: 200px;
+            background-color: green;
+        }
+
+        #div2 {
+            border: 1px solid;
+            height: 200px;
+            width: 200px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <input id="append" type="button" value="Product append to Last"/>
+    <select id="product">
+        <option value="white">Choose product</option>
+        <option value="Desktop">Desktop</option>
+        <option value="Notebook">Notebook</option>
+        <option value="iPad">iPad</option>
+        <option value="iPhone">iPhone</option>
+        <option value="Tablet">Tablet</option>
+    </select>
+    <input id="prepend" type="button" value="Product append to Top"/>
+    <input id="clear" type="button" value="Clear All"/>
+    <input id="update" type="button" value="Put to Shopping Cart"/><br/>
+    <p>Append Product Below:</p>
+    <div id="div1"><span></span></div>
+    <br/>
+    <p>Shopping Cart: </p>
+    <div id="div2"><span></span></div>
+</center>
+</body>
+</html>

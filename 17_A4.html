@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<title>
+</title>
+<script type="text/javascript" src="jslib/jquery-1.11.1.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#stud_rec').html('<table>');
+        $('#stud_rec').append('<tr><th>Stud_ID</th><th>Name</th><th>Age (Adult?)</th></tr></table>');
+        $('#list_rec').click(function (e) {
+            $.getJSON("jslib/student.json", function (jd) {
+                for (let i = 0; i < jd.studid.length; i++) {
+                    if (jd.studid[i] == $("#stud_id").val()) {
+                        var str = "<tr><td>" + jd.studid[i] + "</td><td>" + jd.name[i] + "</td><td>";
+                        if (jd.age[i] >= 21)
+                            str = str + "adult";
+                        else
+                            str = str + "youth";
+                        str = str + '</td></tr>';
+                        $('#stud_rec').append(str);
+                    }
+                }
+                $('#stud_rec').append('</table>');
+            });
+        });
+    });
+</script>
+
+
+<body>
+    <p>Click on the button to load students' records:</p>
+    <p><input id="stud_id"></input>
+        <input type="button" id="list_rec" value="Load Data" />
+    </p>
+    <div id="stud_rec"></div>
+</body>

@@ -1,0 +1,13 @@
+<html>
+
+<body>
+    <form oninput="result.value = (a.value * b.value) * (1 - (c.value / 100))">
+        <b>Sales Summary:</b><br>
+        Price = $<input type="number" id="a"><br />
+        Quantity = <input type="number" id="b"> units<br />
+        Discount = <input type="number" id="c" min="0" max="100"> %<br />
+        Net Total Amount = $<output name="result" id="result" for="a b c"></output>
+    </form>
+</body>
+
+</html>

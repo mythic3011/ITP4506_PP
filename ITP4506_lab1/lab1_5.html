@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lab 1 - 5</title>
+    <script src="jslib/jquery-1.11.1.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var html = $("li");
+            var text = "";
+                for (var i = 0; i < $("li").length; i++) {
+                    text += "Found item: "+html[i].innerHTML + "\n";
+                }
+            alert(text)
+        });
+    </script>
+</head>
+<body>
+<ol>
+    <li>This is the first item.</li>
+    <li>This is the second item.</li>
+    <li>This is the third item.</li>
+</ol>
+</body>
+</html>

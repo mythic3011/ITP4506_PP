@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lab 1-2</title>
+    <script src="jslib/jquery-1.11.1.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#button1").click(function () {
+          alert("Welcome!");
+        });
+
+        $("#button2").dblclick(function () {
+          alert("Good Bye!");
+        });
+
+        $("#button3").mouseenter(function () {
+          $(this).hide();
+        });
+
+        $("#button3").mouseleave(function () {
+          $(this).show();
+        });
+
+        $("input").focus(function () {
+          $(this).css("background-color", "green");
+        });
+        $("input").blur(function () {
+          $(this).css("background-color", "red");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button id="button1">Button 1</button>
+    <button id="button2">Button 2</button>
+    <button id="button3">Button 3</button>
+    <p>
+      Input 1:
+      <input type="text" />
+      Input 2:
+      <input type="text" />
+    </p>
+  </body>
+</html>
